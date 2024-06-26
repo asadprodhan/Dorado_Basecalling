@@ -7,9 +7,11 @@
 <br />
 
 
+<br />
 
 
 ## **Install softwares**
+
 
 
 ### **Create and activate a conda environment**
@@ -25,6 +27,7 @@ conda activate dorado
 ```
 
 
+<br />
 
 
 ### **Install Nextflow and Singularity**
@@ -69,6 +72,9 @@ singularity -h
 ```
 
 
+<br />
+
+
 ### **Install pod5**
 
 
@@ -77,12 +83,19 @@ pip install pod5
 ```
 
 
+<br />
+
+
 ### **Add the pod5 executable path to PATH variable permanently**
 
 
 ```
 export PATH=$PATH:/path/to/the/pod5/executable
 ```
+
+
+<br />
+
 
 
 ### **Install Dorado basecaller**
@@ -102,7 +115,10 @@ tar -zvxf dorado-0.6.2-linux-x64.tar.gz
 ```
 
 
-Add the dorado executable path to PATH variable permanently
+<br />
+
+
+### **Add the dorado executable path to PATH variable permanently**
 
 
 
@@ -119,9 +135,13 @@ export PATH=$PATH:/xx/xx/bin/dorado-0.6.2-linux-x64/bin
 ```
 
 
+<br />
+
+
+<br />
+
+
 ## **Analyse data**
-
-
 
 
 ### **Convert the fast5 files into pod5**
@@ -145,6 +165,8 @@ for FILE in ./fast5/*.fast5; do FILENAME=$(basename "$FILE" .fast5); pod5 conver
 
 ** It can create the pod5 directory itself**
 
+
+<br />
 
 
 ### **Basecall from the pod5 file**
@@ -179,7 +201,11 @@ for FILE in ./pod5/*.pod5; do FILENAME=$(basename "$FILE" .pod5); dorado basecal
 ```
 
 
-If you want to hand-pick the DNA model for your old Nanopore runs, then follow the following steps
+<br />
+
+
+
+## **If you want to hand-pick the DNA model for your old Nanopore runs, then follow the following steps**
 
 
 
@@ -187,7 +213,7 @@ Loop function [DNA model hand-picked]:
 
 
 
-First, download the model of your interest: 
+**First, download the model of your interest:**
 
 
 ```
@@ -201,7 +227,7 @@ dorado download --model dna_r9.4.1_e8_sup@v3.6
 
 
 
-Then run the loop function:
+**Then run the loop function:**
 
 
 
@@ -215,8 +241,10 @@ for FILE in ./pod5/*.pod5; do FILENAME=$(basename "$FILE" .pod5); dorado basecal
 
 
 
+<br />
 
-### **If you want to collect fastq read summary**
+
+## **If you want to collect fastq read summary**
 
 
 
@@ -229,8 +257,10 @@ Alternatively, you can use the **fastqc** program
 
 
 
+<br />
 
-### **Dorado de-multiplexing**
+
+## **Dorado de-multiplexing**
 
 
 
@@ -251,6 +281,11 @@ Loop function to check record numbers in each fastq file
 for FILE in ./*.fastq; do grep -c "@" "$FILE"; done
 ```
 
+
+<br />
+
+
+<br />
 
 
 
