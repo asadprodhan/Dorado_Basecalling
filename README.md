@@ -10,6 +10,21 @@
 <br />
 
 
+<p align="center">
+  <img 
+    src="https://github.com/asadprodhan/Dorado_Basecalling/blob/main/2024-06-01_DoradoVSGuppy_v2.png"
+ align="center" width=45% height=45% >   
+</p>
+<p align = center>
+Re-basecalling old Nanopore runs with Dorado.
+</p>
+
+<br />
+
+
+<br />
+
+
 ## **Install softwares**
 
 
